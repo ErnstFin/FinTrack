@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Ngaturuang (FinTrack) - Aplikasi web progresif (PWA) pencatat dan pengelola keuangan pribadi modern, 100% offline-ready, privat, analitik grafik interaktif, dan ekspor laporan PDF/Excel.">
+    <meta name="keywords" content="ngaturuang, fintrack, pencatat keuangan pribadi, pwa keuangan, money tracker, personal finance manager, aplikasi keuangan offline">
+    <meta name="author" content="Ngaturuang Team">
+    <meta name="theme-color" content="#10b981">
+
+    <!-- Open Graph / Meta Sosial -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ngaturuang (FinTrack) - Kelola Keuangan Pribadi Lebih Cerdas & Modern">
+    <meta property="og:description" content="Aplikasi pencatat keuangan modern dengan grafik interaktif, kustomisasi kategori, anggaran pintar, dan ekspor laporan PDF/Excel. 100% Privacy-First & Offline Ready.">
+    <meta property="og:image" content="icons/icon-192.png">
+
+    <title>Ngaturuang (FinTrack) — Smart Personal Finance & Wealth Management PWA</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons & Manifest -->
+    <link rel="icon" type="image/png" href="icons/icon-192.png">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="landing.css">
+</head>
+
+<body>
+    <!-- Background Ambient Glow Orbs -->
+    <div class="bg-ambient" aria-hidden="true">
+        <div class="orb-1"></div>
+        <div class="orb-2"></div>
+        <div class="orb-3"></div>
+    </div>
+
+    <!-- =========================================================================
+         Landing Header / Navbar
+         ========================================================================= -->
+    <header class="landing-header">
+        <div class="container header-inner">
+            <!-- Brand Logo -->
+            <a href="#" class="brand-logo">
+                <div class="brand-icon-box">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12V7H5a2 2 0 0 1 0-4h14v4" />
+                        <path d="M3 5v14a2 2 0 0 0 2 2h16v-5" />
+                        <path d="M18 12a2 2 0 0 0 0 4h4v-4Z" />
+                    </svg>
+                </div>
+                <span>Ngatur<span class="gradient-text-emerald">uang</span></span>
+                <span class="brand-badge">PWA 2.0</span>
+            </a>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#fitur" class="nav-link">Fitur Unggulan</a></li>
+                <li><a href="#simulator" class="nav-link">Simulasi Finansial</a></li>
+                <li><a href="#keunggulan" class="nav-link">Keunggulan</a></li>
+                <li><a href="#teknologi" class="nav-link">Arsitektur</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+            </ul>
+
+            <!-- Header Action Controls -->
+            <div class="header-actions">
+                <button id="themeToggle" class="theme-toggle-btn" title="Ganti Tema (Dark/Light)" aria-label="Ganti Tema">
+                    <span id="themeIcon">🌙</span>
+                </button>
+                <a href="index.html" class="btn btn-primary" id="openAppNavBtn">
+                    <span>Buka Web App</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+                <button id="mobileToggle" class="mobile-toggle" aria-label="Buka Menu Navigasi">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- =========================================================================
+         Hero Section
+         ========================================================================= -->
+    <main>
+        <section class="hero-section" id="hero">
+            <div class="container hero-grid">
+                <!-- Left Column: Copywriting & Pitch -->
+                <div class="hero-content">
+                    <div class="hero-pill">
+                        <span class="hero-pill-dot"></span>
+                        <span>Aplikasi Finansial Progresif • 100% Privacy & Offline Ready</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        Kelola Keuangan Pribadi Lebih <span class="gradient-text">Cerdas, Rapi,</span> & Terarah.
+                    </h1>
+
+                    <p class="hero-description">
+                        <strong>Ngaturuang (FinTrack)</strong> adalah solusi pencatatan dan pengelolaan finansial modern berbasis <em>Progressive Web App (PWA)</em>. Pantau arus kas harian, kategorisasi pengeluaran dinamis, analisis grafik visual, hingga ekspor laporan PDF & Excel profesional — semuanya instan, tanpa iklan, dan tanpa perlu server pihak ketiga.
+                    </p>
+
+                    <div class="hero-cta-group">
+                        <a href="index.html" class="btn btn-primary btn-lg" id="heroPrimaryCta">
+                            <span>🚀 Luncurkan Aplikasi Sekarang</span>
+                        </a>
+                        <a href="#simulator" class="btn btn-secondary btn-lg" id="heroSimulatorBtn">
+                            <span>✨ Coba Kalkulator Finansial</span>
+                        </a>
+                    </div>
+
+                    <!-- Trust / Feature Badges Strip -->
+                    <div class="hero-features-strip">
+                        <div class="strip-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            <span>100% Data Lokal & Privat</span>
+                        </div>
+                        <div class="strip-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                            <span>PWA Bisa Diinstall di HP & PC</span>
+                        </div>
+                        <div class="strip-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                            <span>Export PDF & XLSX Gratis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Interactive UI Showcase Mockup -->
+                <div class="hero-mockup-wrapper">
+                    <!-- Floating Top Badge -->
+                    <div class="floating-glass-badge badge-top-right">
+                        <span style="font-size: 1.2rem;">📈</span>
+                        <div>
+                            <div style="font-size: 0.7rem; color: var(--text-dim);">Laporan Keuangan</div>
+                            <div style="color: var(--color-primary);">Export PDF Siap 📄</div>
+                        </div>
+                    </div>
+
+                    <!-- Main App Card Preview -->
+                    <div class="mockup-main-card">
+                        <!-- Mockup Header -->
+                        <div class="mockup-header">
+                            <div class="mockup-user-info">
+                                <div class="mockup-avatar">NU</div>
+                                <div>
+                                    <div class="mockup-user-title">Portofolio Keuangan</div>
+                                    <div class="mockup-user-name">Dompet Utama</div>
+                                </div>
+                            </div>
+                            <span class="brand-badge">Aktif</span>
+                        </div>
+
+                        <!-- Balance Summary Box -->
+                        <div class="mockup-balance-box">
+                            <div class="balance-caption">Total Saldo Bersih</div>
+                            <div class="balance-amount">Rp 24.850.000</div>
+
+                            <div class="balance-stats-row">
+                                <div class="balance-stat-item">
+                                    <div class="stat-item-label">
+                                        <span>⬇️</span> Pemasukan
+                                    </div>
+                                    <div class="stat-item-val val-income">+Rp 18.500.000</div>
+                                </div>
+                                <div class="balance-stat-item">
+                                    <div class="stat-item-label">
+                                        <span>⬆️</span> Pengeluaran
+                                    </div>
+                                    <div class="stat-item-val val-expense">-Rp 6.350.000</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recent Activity Mockup -->
+                        <div class="mockup-transactions-list">
+                            <div class="mockup-tx-item">
+                                <div class="tx-left">
+                                    <div class="tx-emoji">💼</div>
+                                    <div>
+                                        <div class="tx-name">Gaji & Bonus Bulanan</div>
+                                        <div class="tx-date">Pemasukan • Transfer Bank</div>
+                                    </div>
+                                </div>
+                                <div class="tx-amount val-income">+Rp 15.000.000</div>
+                            </div>
+
+                            <div class="mockup-tx-item">
+                                <div class="tx-left">
+                                    <div class="tx-emoji">🍔</div>
+                                    <div>
+                                        <div class="tx-name">Belanja Bulanan & Kuliner</div>
+                                        <div class="tx-date">Makanan • QRIS</div>
+                                    </div>
+                                </div>
+                                <div class="tx-amount val-expense">-Rp 1.450.000</div>
+                            </div>
+
+                            <div class="mockup-tx-item">
+                                <div class="tx-left">
+                                    <div class="tx-emoji">⚡</div>
+                                    <div>
+                                        <div class="tx-name">Tagihan Listrik & Internet</div>
+                                        <div class="tx-date">Tagihan • Auto-Debit</div>
+                                    </div>
+                                </div>
+                                <div class="tx-amount val-expense">-Rp 850.000</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Floating Bottom Badge -->
+                    <div class="floating-glass-badge badge-bottom-left">
+                        <span style="font-size: 1.2rem;">☁️</span>
+                        <div>
+                            <div style="font-size: 0.7rem; color: var(--text-dim);">Penyimpanan</div>
+                            <div style="color: var(--color-accent-cyan);">Sync Cloud Aktif</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================================
+             Interactive Financial Health Simulator Section
+             ========================================================================= -->
+        <section class="simulator-section" id="simulator">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Kalkulator Interaktif</span>
+                    <h2 class="section-title">Cek Kesehatan Finansial Anda dalam Hitungan Detik</h2>
+                    <p class="section-subtitle">
+                        Gunakan simulator ini untuk menguji rasio tabungan bulanan Anda dan lihat proyeksi akumulasi kekayaan masa depan dengan prinsip budgeting cerdas.
+                    </p>
+                </div>
+
+                <div class="simulator-card">
+                    <!-- Sliders & Inputs -->
+                    <div class="sim-controls">
+                        <div class="sim-group">
+                            <div class="sim-label-row">
+                                <label for="incomeSlider" class="sim-label">💰 Total Pemasukan Bulanan</label>
+                                <span class="sim-value-badge" id="incomeVal">Rp 15.000.000</span>
+                            </div>
+                            <input type="range" id="incomeSlider" class="sim-slider" min="2000000" max="60000000" step="500000" value="15000000">
+                        </div>
+
+                        <div class="sim-group">
+                            <div class="sim-label-row">
+                                <label for="expenseSlider" class="sim-label">🛍️ Estimasi Pengeluaran Bulanan</label>
+                                <span class="sim-value-badge" id="expenseVal">Rp 8.500.000</span>
+                            </div>
+                            <input type="range" id="expenseSlider" class="sim-slider" min="1000000" max="50000000" step="500000" value="8500000">
+                        </div>
+                    </div>
+
+                    <!-- Results Output Display -->
+                    <div class="sim-results-panel">
+                        <div class="health-status-badge">
+                            <span class="status-title">Status Kesehatan Finansial:</span>
+                            <div class="status-indicator" id="healthStatus">
+                                <span style="color: #10b981">🟢 Sangat Sehat</span>
+                            </div>
+                        </div>
+
+                        <div class="sim-metrics-grid">
+                            <div class="metric-box">
+                                <div class="metric-title">Sisa Uang Bersih / Bulan</div>
+                                <div class="metric-val val-income" id="netSavingsVal">+Rp 6.500.000</div>
+                            </div>
+                            <div class="metric-box">
+                                <div class="metric-title">Savings Rate (Rasio Tabungan)</div>
+                                <div class="metric-val val-income" id="savingsRateVal">43%</div>
+                            </div>
+                            <div class="metric-box">
+                                <div class="metric-title">Proyeksi Tabungan 1 Tahun</div>
+                                <div class="metric-val" id="projection1Yr">Rp 78.000.000</div>
+                            </div>
+                            <div class="metric-box">
+                                <div class="metric-title">Estimasi 5 Tahun (+Bunga/Investasi)</div>
+                                <div class="metric-val" id="projection5Yr">Rp 421.200.000</div>
+                            </div>
+                        </div>
+
+                        <div class="sim-advice-box" id="healthAdvice">
+                            <strong>Rekomendasi Ngaturuang:</strong> Alokasi Anda sangat ideal (di atas 20%). Catat setiap transaksi secara konsisten di Ngaturuang untuk menjaga disiplin keuangan ini!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================================
+             Core Features Grid
+             ========================================================================= -->
+        <section class="features-section" id="fitur">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Fitur Lengkap</span>
+                    <h2 class="section-title">Dirancang untuk Kemudahan & Kendali Finansial Total</h2>
+                    <p class="section-subtitle">
+                        Semua alat yang Anda butuhkan untuk mengatur arus kas harian, bulanan, hingga tahunan dalam satu genggaman.
+                    </p>
+                </div>
+
+                <div class="features-grid">
+                    <!-- Feature 1 -->
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper icon-emerald">📊</div>
+                        <h3 class="feature-card-title">Dashboard & Visual Analytics</h3>
+                        <p class="feature-card-desc">
+                            Visualisasikan pemasukan vs pengeluaran lewat diagram batang bulanan dan pie chart interaktif bertenaga Chart.js yang responsif.
+                        </p>
+                        <div class="feature-tag-list">
+                            <span class="feature-mini-tag">Chart.js</span>
+                            <span class="feature-mini-tag">Trend Analisis</span>
+                            <span class="feature-mini-tag">Stat Ringkas</span>
+                        </div>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper icon-cyan">💳</div>
+                        <h3 class="feature-card-title">Manajemen Transaksi Multi-Dimensi</h3>
+                        <p class="feature-card-desc">
+                            Catat pemasukan dan pengeluaran secara cepat. Filter berdasarkan tanggal harian, mingguan, bulanan, tahunan atau cari berdasarkan catatan.
+                        </p>
+                        <div class="feature-tag-list">
+                            <span class="feature-mini-tag">Pencarian Cepat</span>
+                            <span class="feature-mini-tag">Filter Tanggal</span>
+                            <span class="feature-mini-tag">Multi-Metode</span>
+                        </div>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper icon-purple">🏷️</div>
+                        <h3 class="feature-card-title">Kustomisasi Kategori & Emoji</h3>
+                        <p class="feature-card-desc">
+                            Bebas atur kategori transaksi sesuai gaya hidup Anda dengan pemilih warna kustom dan ikon emoji ekspresif tanpa batas.
+                        </p>
+                        <div class="feature-tag-list">
+                            <span class="feature-mini-tag">Color Palette</span>
+                            <span class="feature-mini-tag">Emoji Picker</span>
+                            <span class="feature-mini-tag">Kategori Custom</span>
+                        </div>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper icon-rose">📈</div>
+                        <h3 class="feature-card-title">Export Laporan PDF & Excel</h3>
+                        <p class="feature-card-desc">
+                            Cetak laporan keuangan berstandar profesional ke format PDF rapi (jsPDF AutoTable) atau file spreadsheet Excel multi-sheet (.xlsx).
+                        </p>
+                        <div class="feature-tag-list">
+                            <span class="feature-mini-tag">jsPDF Table</span>
+                            <span class="feature-mini-tag">Excel SheetJS</span>
+                            <span class="feature-mini-tag">Custom Range</span>
+                        </div>
+                    </div>
+
+                    <!-- Feature 5 -->
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper icon-amber">⚠️</div>
+                        <h3 class="feature-card-title">Smart Budgeting & Warning Limit</h3>
+                        <p class="feature-card-desc">
+                            Tentukan batas anggaran harian Anda. Sistem cerdas akan memberikan peringatan real-time saat pengeluaran Anda menyentuh 80% dari limit.
+                        </p>
+                        <div class="feature-tag-list">
+                            <span class="feature-mini-tag">Limit Harian</span>
+                            <span class="feature-mini-tag">80% Warning Alert</span>
+                            <span class="feature-mini-tag">Push Reminder</span>
+                        </div>
+                    </div>
+
+                    <!-- Feature 6 -->
+                    <div class="feature-card">
+                        <div class="feature-icon-wrapper icon-blue">☁️</div>
+                        <h3 class="feature-card-title">Cloud Sync & Privacy-First</h3>
+                        <p class="feature-card-desc">
+                            Data Anda 100% tersimpan aman di IndexedDB perangkat. Tersedia opsi sinkronisasi awan otomatis untuk akses antar gadget.
+                        </p>
+                        <div class="feature-tag-list">
+                            <span class="feature-mini-tag">IndexedDB</span>
+                            <span class="feature-mini-tag">Cloud Backup</span>
+                            <span class="feature-mini-tag">Tanpa Tracking</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================================
+             Comparison Matrix Section
+             ========================================================================= -->
+        <section class="comparison-section" id="keunggulan">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Komparasi</span>
+                    <h2 class="section-title">Mengapa Memilih Ngaturuang?</h2>
+                    <p class="section-subtitle">
+                        Lihat bagaimana Ngaturuang memberikan kebebasan penuh tanpa batasan fitur premium atau langganan berbayar.
+                    </p>
+                </div>
+
+                <div class="comparison-wrapper">
+                    <table class="comp-table">
+                        <thead>
+                            <tr>
+                                <th>Kriteria & Fitur</th>
+                                <th class="col-highlight">✨ Ngaturuang (FinTrack)</th>
+                                <th>Aplikasi Konvensional Lain</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Privasi & Kepemilikan Data</strong></td>
+                                <td class="col-highlight"><span class="check-icon">✓</span> 100% Tersimpan Lokal di Browser/Device</td>
+                                <td><span class="cross-icon">✗</span> Dijual ke pihak ketiga / server cloud tertutup</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Iklan & Biaya Langganan</strong></td>
+                                <td class="col-highlight"><span class="check-icon">✓</span> 100% Gratis & Bebas Iklan Selamanya</td>
+                                <td><span class="cross-icon">✗</span> Iklan pop-up & tagihan langganan bulanan</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Mode Offline (Tanpa Internet)</strong></td>
+                                <td class="col-highlight"><span class="check-icon">✓</span> Berjalan 100% Penuh via Service Worker PWA</td>
+                                <td><span class="cross-icon">✗</span> Wajib koneksi internet & login server</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Export PDF & Excel (.xlsx)</strong></td>
+                                <td class="col-highlight"><span class="check-icon">✓</span> Tersedia Lengkap & Tanpa Batas</td>
+                                <td><span class="cross-icon">✗</span> Harus upgrade ke paket Premium/VIP</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Kemudahan Instalasi</strong></td>
+                                <td class="col-highlight"><span class="check-icon">✓</span> 1 Klik Langsung Pasang (PWA Ringan)</td>
+                                <td><span class="cross-icon">✗</span> Download ratusan MB dari App Store/Play Store</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Kebebasan Kustomisasi Kategori</strong></td>
+                                <td class="col-highlight"><span class="check-icon">✓</span> Unlimited dengan Emoji & Color Picker</td>
+                                <td><span class="cross-icon">✗</span> Dibatasi hanya 5-10 kategori default</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================================
+             Tech Stack & Architecture Showcase
+             ========================================================================= -->
+        <section class="tech-section" id="teknologi">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Arsitektur Modern</span>
+                    <h2 class="section-title">Dibangun dengan Teknologi Web Terdepan</h2>
+                    <p class="section-subtitle">
+                        Arsitektur modular, ringan, hemat daya, dan tanpa dependensi framework berat.
+                    </p>
+                </div>
+
+                <div class="tech-grid">
+                    <div class="tech-card">
+                        <div class="tech-icon">⚡</div>
+                        <div class="tech-name">HTML5 & CSS3 Tokens</div>
+                        <div class="tech-role">Struktur Semantik & Glassmorphism Responsif</div>
+                    </div>
+                    <div class="tech-card">
+                        <div class="tech-icon">📜</div>
+                        <div class="tech-name">Vanilla ES6+ JavaScript</div>
+                        <div class="tech-role">Performa Eksekusi Cepat & Tanpa Overhead</div>
+                    </div>
+                    <div class="tech-card">
+                        <div class="tech-icon">📊</div>
+                        <div class="tech-name">Chart.js 4.4 Engine</div>
+                        <div class="tech-role">Visualisasi Data Grafik Interaktif & Halus</div>
+                    </div>
+                    <div class="tech-card">
+                        <div class="tech-icon">📄</div>
+                        <div class="tech-name">jsPDF + SheetJS</div>
+                        <div class="tech-role">Export Instan ke Dokumen PDF & Excel</div>
+                    </div>
+                    <div class="tech-card">
+                        <div class="tech-icon">📱</div>
+                        <div class="tech-name">Progressive Web App (PWA)</div>
+                        <div class="tech-role">Service Worker Cache & Web App Manifest</div>
+                    </div>
+                    <div class="tech-card">
+                        <div class="tech-icon">💾</div>
+                        <div class="tech-name">IndexedDB + LocalStorage</div>
+                        <div class="tech-role">Penyimpanan Terdistribusi & Offline-First</div>
+                    </div>
+                    <div class="tech-card">
+                        <div class="tech-icon">🌓</div>
+                        <div class="tech-name">Dynamic Theme Engine</div>
+                        <div class="tech-role">Transisi Obsidian Dark & Crystal Light</div>
+                    </div>
+                    <div class="tech-card">
+                        <div class="tech-icon">🔒</div>
+                        <div class="tech-name">Client-Side Privacy</div>
+                        <div class="tech-role">Zero Third-Party Trackers & Telemetry</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================================
+             FAQ Accordion Section
+             ========================================================================= -->
+        <section class="faq-section" id="faq">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">FAQ</span>
+                    <h2 class="section-title">Pertanyaan yang Sering Diajukan</h2>
+                    <p class="section-subtitle">
+                        Jawaban lengkap mengenai cara kerja, privasi data, dan penggunaan Ngaturuang.
+                    </p>
+                </div>
+
+                <div class="faq-accordion">
+                    <!-- FAQ 1 -->
+                    <div class="faq-item active">
+                        <button class="faq-question">
+                            <span>Apakah data finansial saya aman dan terlindungi?</span>
+                            <span class="faq-chevron">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            Sangat aman! Ngaturuang mengusung prinsip <em>Local-First Privacy</em>. Seluruh catatan transaksi, kategori, dan saldo disimpan secara lokal di memori browser perangkat Anda (IndexedDB & LocalStorage). Tidak ada data Anda yang dikirim ke server iklan atau pihak ketiga tanpa persetujuan Anda.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Bagaimana cara menginstall Ngaturuang di Smartphone atau PC?</span>
+                            <span class="faq-chevron">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            Cukup buka Ngaturuang di browser (seperti Google Chrome, Safari, Edge), lalu klik menu browser dan pilih <strong>"Install App"</strong> atau <strong>"Tambahkan ke Layar Utama (Add to Home Screen)"</strong>. Aplikasi akan terpasang layaknya aplikasi native tanpa memakan banyak ruang penyimpanan.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Apakah Ngaturuang bisa digunakan saat tidak ada koneksi internet?</span>
+                            <span class="faq-chevron">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            Ya, 100%! Berkat teknologi <em>Service Worker</em>, aplikasi dan seluruh fiturnya tetap dapat diakses, digunakan mencatat transaksi, melihat riwayat, dan memantau saldo kapan saja dan di mana saja tanpa sinyal internet.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Bagaimana cara mengekspor data ke file PDF atau Excel?</span>
+                            <span class="faq-chevron">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            Buka menu <strong>"Laporan"</strong> di dalam aplikasi, pilih rentang tanggal yang ingin dianalisis (misalnya bulan ini atau tahun ini), lalu klik tombol <strong>"📄 Export PDF"</strong> untuk dokumen siap cetak atau <strong>"📊 Export Excel"</strong> untuk file spreadsheet (.xlsx).
+                        </div>
+                    </div>
+
+                    <!-- FAQ 5 -->
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Apakah aplikasi ini benar-benar gratis?</span>
+                            <span class="faq-chevron">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            Ya, Ngaturuang adalah proyek open-source berlisensi bebas yang dapat digunakan oleh siapa saja secara gratis tanpa biaya langganan tersembunyi.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================================
+             Bottom CTA Banner
+             ========================================================================= -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-banner">
+                    <h2 class="cta-title">Siap Mengambil Kendali Penuh Atas Keuangan Anda?</h2>
+                    <p class="cta-subtitle">
+                        Mulai catat transaksi pertama Anda sekarang. Tanpa registrasi rumit, tanpa bayar, langsung buka dan nikmati kemudahannya.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="index.html" class="btn btn-primary btn-lg" id="footerCtaBtn">
+                            <span>🚀 Luncurkan Ngaturuang Sekarang</span>
+                        </a>
+                        <a href="generate-icons.html" class="btn btn-secondary btn-lg" target="_blank">
+                            <span>🎨 Icon Generator Tool</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =========================================================================
+         Footer
+         ========================================================================= -->
+    <footer class="landing-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Info -->
+                <div>
+                    <a href="#" class="brand-logo">
+                        <div class="brand-icon-box">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                                <path d="M21 12V7H5a2 2 0 0 1 0-4h14v4" />
+                                <path d="M3 5v14a2 2 0 0 0 2 2h16v-5" />
+                                <path d="M18 12a2 2 0 0 0 0 4h4v-4Z" />
+                            </svg>
+                        </div>
+                        <span>Ngatur<span class="gradient-text-emerald">uang</span></span>
+                    </a>
+                    <p class="footer-brand-desc">
+                        Aplikasi pencatat keuangan pribadi modern, cerdas, dan aman berbasis Progressive Web App. Dibuat untuk membantu Anda mencapai kebebasan finansial.
+                    </p>
+                </div>
+
+                <!-- Navigation Col -->
+                <div>
+                    <h4 class="footer-col-title">Navigasi Cepat</h4>
+                    <ul class="footer-link-list">
+                        <li><a href="#hero" class="footer-link">Beranda</a></li>
+                        <li><a href="#fitur" class="footer-link">Fitur Unggulan</a></li>
+                        <li><a href="#simulator" class="footer-link">Kalkulator Finansial</a></li>
+                        <li><a href="#keunggulan" class="footer-link">Komparasi Fitur</a></li>
+                    </ul>
+                </div>
+
+                <!-- App Col -->
+                <div>
+                    <h4 class="footer-col-title">Aplikasi</h4>
+                    <ul class="footer-link-list">
+                        <li><a href="index.html" class="footer-link">Buka FinTrack Pro</a></li>
+                        <li><a href="generate-icons.html" class="footer-link">Icon Generator</a></li>
+                        <li><a href="manifest.json" class="footer-link">PWA Manifest</a></li>
+                        <li><a href="README.md" class="footer-link">Dokumentasi</a></li>
+                    </ul>
+                </div>
+
+                <!-- Technology Col -->
+                <div>
+                    <h4 class="footer-col-title">Teknologi</h4>
+                    <ul class="footer-link-list">
+                        <li><a href="https://www.chartjs.org/" target="_blank" rel="noopener" class="footer-link">Chart.js</a></li>
+                        <li><a href="https://github.com/parallax/jsPDF" target="_blank" rel="noopener" class="footer-link">jsPDF Engine</a></li>
+                        <li><a href="https://sheetjs.com/" target="_blank" rel="noopener" class="footer-link">SheetJS (xlsx)</a></li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps" target="_blank" rel="noopener" class="footer-link">PWA Standard</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div>© 2026 Ngaturuang (FinTrack). Hak Cipta Dilindungi. Dibuat dengan presisi & privasi penuh.</div>
+                <div>Versi 2.0.0 • Progressive Web Application</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="landing.js"></script>
+</body>
+
+</html>
