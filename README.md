@@ -83,8 +83,8 @@ Aplikasi web progresif (PWA) untuk mengelola keuangan pribadi dengan fitur lengk
      ```
 
 3. **Akses Aplikasi & Landing Page**
-   - **Landing Page Profil Projek**: Buka `landing.html` untuk ringkasan fitur, kalkulator kesehatan finansial interaktif, dan FAQ.
-   - **Aplikasi FinTrack**: Buka `index.html` langsung untuk mencatat transaksi dan mengelola keuangan.
+   - **Halaman Utama (Landing Page)**: Buka `http://localhost:8000` atau `index.html` langsung untuk profil projek, simulasi finansial interaktif, dan FAQ.
+   - **Aplikasi FinTrack (Fitur Utama)**: Buka `feature.html` (atau klik tombol "Buka Web App" di landing page) untuk mencatat transaksi dan mengelola keuangan.
 
 ### Deploy ke Hosting
 

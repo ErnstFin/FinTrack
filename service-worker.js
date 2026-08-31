@@ -2,10 +2,13 @@
 // Service Worker for PWA
 // ========================================
 
-const CACHE_NAME = 'ngaturuang-v1.0.0';
+const CACHE_NAME = 'ngaturuang-v1.1.0';
 const urlsToCache = [
     '.',
     'index.html',
+    'feature.html',
+    'landing.css',
+    'landing.js',
     'styles.css',
     'app.js',
     'storage.js',

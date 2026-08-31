@@ -627,10 +627,8 @@ class FinanceApp {
         // Settings Data & Export Actions
         document.getElementById('saveBudgetBtn')?.addEventListener('click', () => this.saveDailyBudget());
         
-        // Export Finance Modal Triggers
+        // Export Finance Modal Trigger
         document.getElementById('openExportFinanceModalBtn')?.addEventListener('click', () => this.openExportModal());
-        document.getElementById('exportPdfQuickBtn')?.addEventListener('click', () => exportManager.exportToPDF());
-        document.getElementById('exportExcelQuickBtn')?.addEventListener('click', () => exportManager.exportToExcel());
 
         // Export Modal Format Selector
         document.querySelectorAll('.format-select-btn').forEach(btn => {
