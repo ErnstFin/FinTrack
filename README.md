@@ -58,54 +58,79 @@ Aplikasi web progresif (PWA) untuk mengelola keuangan pribadi dengan fitur lengk
 - Clear all data & reset
 - Local storage dengan IndexedDB fallback
 
-## 🚀 Cara Menggunakan
+## 🚀 Cara Menjalankan Aplikasi (Laravel)
 
-### Instalasi Lokal
+### Instalasi & Menjalankan Lokal
 
-1. **Clone atau Download**
+1. **Clone / Buka Proyek di Laragon / Terminal**
    ```bash
-   # Download folder Ngaturuang
-   # Atau clone repository jika ada
+   cd c:\laragon\www\Ngaturuang
    ```
 
-2. **Buka dengan Browser**
-   - Buka file `index.html` dengan browser modern
-   - Atau gunakan local server:
-     ```bash
-     # Dengan Python
-     python -m http.server 8000
-     
-     # Dengan Node.js
-     npx serve
-     
-     # Dengan PHP
-     php -S localhost:8000
-     ```
+2. **Install Dependensi Composer & Set Environment**
+   ```bash
+   composer install
+   cp .env.example .env     # (jika belum ada)
+   php artisan key:generate
+   ```
 
-3. **Akses Aplikasi & Landing Page**
-   - **Halaman Utama (Landing Page)**: Buka `http://localhost:8000` atau `index.html` langsung untuk profil projek, simulasi finansial interaktif, dan FAQ.
-   - **Aplikasi FinTrack (Fitur Utama)**: Buka `feature.html` (atau klik tombol "Buka Web App" di landing page) untuk mencatat transaksi dan mengelola keuangan.
+3. **Jalankan Server Development**
+   ```bash
+   php artisan serve
+   ```
+   Atau jika menggunakan **Laragon**, cukup hidupkan Apache/Nginx dan akses:
+   `http://ngaturuang.test` atau `http://localhost:8000`
 
-### Deploy ke Hosting
+4. **Akses Halaman & Rute Aplikasi**
+   - **Landing Page**: `http://localhost:8000/` (Route: `home`)
+   - **FinTrack PRO Web App**: `http://localhost:8000/app` (Route: `app`)
+   - **Kompatibilitas**: Akses ke `/feature` atau `/index.html` otomatis di-redirect ke rute yang sesuai.
 
-#### Vercel
-```bash
-# Install Vercel CLI
-npm i -g vercel
+## 📂 Struktur Folder Proyek (Laravel)
 
-# Deploy
-vercel
 ```
-
-#### Netlify
-- Drag & drop folder Ngaturuang ke Netlify Drop
-- Atau connect dengan Git repository
-
-#### GitHub Pages
-1. Upload folder ke GitHub repository
-2. Enable GitHub Pages di Settings
-3. Pilih branch dan folder
-4. Akses via `https://username.github.io/repo-name`
+Ngaturuang/
+├── app/
+│   ├── Http/Controllers/
+│   │   ├── Controller.php
+│   │   ├── LandingController.php   # Controller halaman beranda
+│   │   └── AppController.php       # Controller dashboard aplikasi
+│   ├── Models/
+│   │   ├── User.php
+│   │   ├── Transaction.php        # Model transaksi
+│   │   └── Category.php           # Model kategori
+│   └── Providers/
+├── bootstrap/                     # Bootstrapping Laravel
+├── config/                        # File konfigurasi aplikasi & database
+├── database/                      # Migrasi database, factories, & seeders
+├── public/                        # Aset publik statis (CSS, JS, Icons, PWA)
+│   ├── css/
+│   │   ├── landing.css
+│   │   └── styles.css
+│   ├── js/
+│   │   ├── app.js
+│   │   ├── storage.js
+│   │   ├── cloud-sync.js
+│   │   ├── export.js
+│   │   ├── demo-data.js
+│   │   ├── landing.js
+│   │   └── pwa.js
+│   ├── icons/                     # Icon PWA (72x72 s/d 512x512)
+│   ├── index.php                  # Entrypoint HTTP utama
+│   ├── manifest.json              # PWA Web App Manifest
+│   └── service-worker.js          # PWA Service Worker Cache
+├── resources/
+│   └── views/                     # Template Blade
+│       ├── landing.blade.php      # View Landing Page
+│       └── app.blade.php          # View Aplikasi FinTrack PRO
+├── routes/
+│   └── web.php                    # Definisi rute web
+├── storage/                       # Storage & cache sistem
+├── tests/                         # Automated tests (Feature & Unit)
+├── .env                           # Konfigurasi environment
+├── artisan                        # Laravel Artisan CLI
+└── composer.json                  # Dependensi PHP & Laravel
+```
 
 ## 📖 Panduan Pengguna
 
